@@ -61,8 +61,8 @@ namespace Telegram.Bot.Examples.Echo
 
                     await Bot.SendTextMessageAsync(
                         message.Chat.Id,
-                        "Choose",
-                        replyMarkup: inlineKeyboard);
+                        "No Availability");//,
+                        //replyMarkup: inlineKeyboard);
                     break;
 
                 // send custom keyboard
@@ -75,8 +75,8 @@ namespace Telegram.Bot.Examples.Echo
 
                     await Bot.SendTextMessageAsync(
                         message.Chat.Id,
-                        "Choose",
-                        replyMarkup: ReplyKeyboard);
+                        "10h 10m");//,
+                        //replyMarkup: ReplyKeyboard);
                     break;
 
                 // send a photo
