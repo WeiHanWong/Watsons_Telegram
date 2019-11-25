@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Weihan\\source\\repos\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj": {}
+    "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Weihan\\source\\repos\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj": {
+    "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Weihan\\source\\repos\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
+        "projectUniqueName": "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
         "projectName": "Watsons_Telegram",
-        "projectPath": "C:\\Users\\Weihan\\source\\repos\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
+        "projectPath": "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
         "packagesPath": "C:\\Users\\Weihan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Weihan\\source\\repos\\Watsons_Telegram\\Watsons_Telegram\\obj\\",
+        "outputPath": "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
