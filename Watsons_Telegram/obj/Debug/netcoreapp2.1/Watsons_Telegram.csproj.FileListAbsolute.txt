@@ -1,0 +1,14 @@
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\bin\Debug\netcoreapp2.1\Watsons_Telegram.deps.json
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\bin\Debug\netcoreapp2.1\Watsons_Telegram.runtimeconfig.json
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\bin\Debug\netcoreapp2.1\Watsons_Telegram.runtimeconfig.dev.json
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\bin\Debug\netcoreapp2.1\Watsons_Telegram.dll
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.csprojAssemblyReference.cache
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.csproj.CoreCompileInputs.cache
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.RazorAssemblyInfo.cache
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.RazorAssemblyInfo.cs
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.AssemblyInfoInputs.cache
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.AssemblyInfo.cs
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.RazorTargetAssemblyInfo.cache
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\bin\Debug\netcoreapp2.1\Watsons_Telegram.pdb
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.dll
+C:\Users\Weihan\source\repos\Watsons_Telegram\Watsons_Telegram\obj\Debug\netcoreapp2.1\Watsons_Telegram.pdb
