@@ -12735,24 +12735,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Weihan\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
       "projectName": "Watsons_Telegram",
-      "projectPath": "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
-      "packagesPath": "C:\\Users\\Weihan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Weihan\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\Watsons_Telegram.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\Watsons_Telegram\\Watsons_Telegram\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Weihan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

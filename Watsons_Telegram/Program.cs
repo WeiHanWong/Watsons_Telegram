@@ -21,7 +21,7 @@ namespace Watsons_Telegram
         public static void Main(string[] args)
         {
             _ = new WatsonsMessenger();
-            CreateWebHostBuilder(args).Build().Run();
+            //CreateWebHostBuilder(args).Build().Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
@@ -57,7 +57,7 @@ namespace Watsons_Telegram
             switch (message.Text.Split(' ').First())
             {
                 // send inline keyboard
-                case "/slotAvailability":
+                case "/slotavailability":
                     await Bot.SendChatActionAsync(message.Chat.Id, ChatAction.Typing);
 
                     await Task.Delay(500); // simulate longer running task
@@ -68,7 +68,7 @@ namespace Watsons_Telegram
                     break;
 
                 // send custom keyboard
-                case "/waitingTime":
+                case "/waitingtime":
                     await Bot.SendChatActionAsync(message.Chat.Id, ChatAction.Typing);
 
                     await Task.Delay(500); // simulate longer running task
@@ -79,7 +79,7 @@ namespace Watsons_Telegram
                     break;
 
                 // send a photo
-                case "/queueLength":
+                case "/queuelength":
                     await Bot.SendChatActionAsync(message.Chat.Id, ChatAction.Typing);
 
                     await Task.Delay(500); // simulate longer running task
@@ -90,7 +90,7 @@ namespace Watsons_Telegram
                     break;
 
                 // request location or contact
-                case "/operatingHours":
+                case "/operatinghours":
                     await Bot.SendChatActionAsync(message.Chat.Id, ChatAction.Typing);
 
                     await Task.Delay(500); // simulate longer running task
@@ -103,10 +103,10 @@ namespace Watsons_Telegram
                 default:
                     const string usage = @"
                         Usage:
-                        /slotAvailability   - get slot availability
-                        /waitingTime - get average waiting time
-                        /queueLength    - get queue length
-                        /operatingHours  - get operating hours";
+                        /slotavailability   - get slot availability
+                        /waitingtime - get average waiting time
+                        /queuelength    - get queue length
+                        /operatinghours  - get operating hours";
 
                     await Bot.SendTextMessageAsync(
                         message.Chat.Id,
