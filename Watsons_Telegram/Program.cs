@@ -64,7 +64,7 @@ namespace Watsons_Telegram
 
                     await Bot.SendTextMessageAsync(
                         message.Chat.Id,
-                        "Available");
+                        "xiao Available");
                     break;
 
                 // send custom keyboard
