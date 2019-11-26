@@ -7,6 +7,7 @@ using Telegram.Bot;
 using Telegram.Bot.Types;
 using Watson_WebService;
 using Watsons_Telegram.Models;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace Watsons_Telegram.Commands
 {
@@ -34,8 +35,14 @@ namespace Watsons_Telegram.Commands
         {
             var chatId = message.Chat.Id;
 
+            ReplyKeyboardMarkup ReplyKeyboard = new[]
+                    {
+                        new[] { "/slotavailability", "/waitingtime" },
+                        new[] { "/operatinghours"},
+                    };
+
             await botClient.SendTextMessageAsync(chatId, @"Registering...
-(Please wait do not type anything)", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
+(Please wait do not type anything)", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: ReplyKeyboard);
 
             TelegramUser newUser = new TelegramUser();
 
@@ -55,7 +62,7 @@ namespace Watsons_Telegram.Commands
                 @"Usage: 
 /slotavailability - get slot availability
 /waitingtime - get average waiting time
-/operatinghours - get operating hours", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
+/operatinghours - get operating hours", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: ReplyKeyboard);
         }
     }
 }
