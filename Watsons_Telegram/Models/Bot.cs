@@ -24,6 +24,8 @@ namespace Watsons_Telegram.Models
             commandsList = new List<Command>();
             commandsList.Add(new StartCommand());
             commandsList.Add(new AvailabilityCommand());
+            commandsList.Add(new WaitingCommand());
+            commandsList.Add(new OperatingCommand());
             //TODO: Add more commands
 
             botClient = new TelegramBotClient(AppSettings.Key);

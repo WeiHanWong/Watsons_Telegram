@@ -7,9 +7,9 @@ using Telegram.Bot.Types;
 
 namespace Watsons_Telegram.Models.Commands
 {
-    public class AvailabilityCommand : Command
+    public class WaitingCommand : Command
     {
-        public override string Name => @"/slotavailability";
+        public override string Name => @"/waitingtime";
 
         public override bool Contains(Message message)
         {
@@ -22,7 +22,7 @@ namespace Watsons_Telegram.Models.Commands
         public override async Task Execute(Message message, TelegramBotClient botClient)
         {
             var chatId = message.Chat.Id;
-            await botClient.SendTextMessageAsync(chatId, "Highly Available", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
+            await botClient.SendTextMessageAsync(chatId, "10 mins", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
         }
     }
 }
