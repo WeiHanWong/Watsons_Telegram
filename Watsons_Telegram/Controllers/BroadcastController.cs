@@ -26,32 +26,23 @@ namespace Watsons_Telegram.Controllers
         private static readonly HttpClient client = new HttpClient();
 
         [HttpPost]
-        public IActionResult Create([FromBody] string value)
+        public IActionResult send([FromBody] string value)
         {
             dynamic broadcastBody = JsonConvert.DeserializeObject<dynamic>(value);
-            try
+            var chatQuery = Database.TelegramUsers
+                .Select(x => x.ChatId)
+                .ToArray();
+
+            //string[] chatQuery = new string[] { "473354391", "460865971" };
+
+            var m = broadcastBody.message.Value;
+
+            foreach (var chatid in chatQuery)
             {
-                var chatQuery = Database.TelegramUsers
-                    .Select(x => x.ChatId)
-                    .ToArray();
-
-                //string[] ids = new string[] { "473354391", "460865971" };
-
-                var m = broadcastBody.message.Value;
-
-                foreach (var chatid in chatQuery)
-                {
-                    Task<HttpResponseMessage> task = client.PostAsync("https://api.telegram.org/bot" + Bot.Key + "/sendMessage?chat_id=" + chatid + "&text=" + m, null);
-                }
+                Task<HttpResponseMessage> task = client.PostAsync("https://api.telegram.org/bot" + Bot.Key + "/sendMessage?chat_id=" + chatid + "&text=" + m, null);
+            }
                 
-                return Ok();
-            }
-            catch (Exception)
-            {
-                object httpFailRequestResultMessage = new { message = "Unable to send" };
-                return BadRequest(httpFailRequestResultMessage);
-            }
+            return Ok();
         }
-
     }
 }

@@ -11,7 +11,7 @@ namespace Watson_WebService
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=watsonsdb;user=root;password=12345");
+            optionsBuilder.UseMySQL("server=db4free.net;database=watsonsdbtele;user=watsonstelegram;password=P@ssw0rd;oldguids=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

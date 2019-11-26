@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -11,6 +12,14 @@ namespace Watsons_Telegram.Commands
 {
     public class StartCommand : Command
     {
+
+        public ApplicationDbContext Database { get; }
+
+        public StartCommand()
+        {
+            Database = new ApplicationDbContext();
+        }
+
         public override string Name => @"/start";
 
         public override bool Contains(Message message)
@@ -25,7 +34,8 @@ namespace Watsons_Telegram.Commands
         {
             var chatId = message.Chat.Id;
 
-            ApplicationDbContext Database = new ApplicationDbContext();
+            await botClient.SendTextMessageAsync(chatId, @"Registering...
+(Please wait do not type anything)", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
 
             TelegramUser newUser = new TelegramUser();
 
@@ -33,7 +43,7 @@ namespace Watsons_Telegram.Commands
             .Where(x => x.ChatId == chatId.ToString())
             .Count();
 
-            if(slotQueryResultCount < 1)
+            if (slotQueryResultCount < 1)
             {
                 newUser.ChatId = chatId.ToString();
 

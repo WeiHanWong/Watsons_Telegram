@@ -33,7 +33,7 @@ namespace Watsons_Telegram
         {
             using (var context = new ApplicationDbContext())
             {
-                context.Database.EnsureDeleted();
+                //context.Database.EnsureDeleted();
                 // Creates the database if not exists
                 context.Database.EnsureCreated();
 
