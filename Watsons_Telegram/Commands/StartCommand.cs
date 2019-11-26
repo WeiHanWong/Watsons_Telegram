@@ -42,7 +42,7 @@ namespace Watsons_Telegram.Commands
                     };
 
             await botClient.SendTextMessageAsync(chatId, @"Registering...
-(Please wait do not type anything)", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: ReplyKeyboard);
+(Do not type anything. Please wait...)", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: ReplyKeyboard);
 
             TelegramUser newUser = new TelegramUser();
 
