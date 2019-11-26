@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace Watsons_Telegram.Models.Commands
+namespace Watsons_Telegram.Commands
 {
     public class OtherCommand : Command
     {

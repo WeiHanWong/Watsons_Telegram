@@ -24,9 +24,9 @@ namespace Watsons_Telegram.Controllers
         {
             if (update == null) return Ok();
 
-            var commands = Bot.Commands;
+            var commands = BotHook.Commands;
             var message = update.Message;
-            var botClient = await Bot.GetBotClientAsync();
+            var botClient = await BotHook.GetBotClientAsync();
 
             foreach (var command in commands)
             {

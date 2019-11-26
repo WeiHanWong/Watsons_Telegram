@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace Watsons_Telegram.Models.Commands
+namespace Watsons_Telegram.Commands
 {
-    public class AvailabilityCommand : Command
+    public class OperatingCommand : Command
     {
-        public override string Name => @"/slotavailability";
+        public override string Name => @"/operatinghours";
 
         public override bool Contains(Message message)
         {
@@ -22,7 +22,7 @@ namespace Watsons_Telegram.Models.Commands
         public override async Task Execute(Message message, TelegramBotClient botClient)
         {
             var chatId = message.Chat.Id;
-            await botClient.SendTextMessageAsync(chatId, "Highly Available", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
+            await botClient.SendTextMessageAsync(chatId, "8:00am to 11:45pm", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
         }
     }
 }

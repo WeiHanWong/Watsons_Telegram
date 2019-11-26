@@ -43,7 +43,7 @@ namespace Watsons_Telegram
 
             app.UseHttpsRedirection();
             app.UseMvc();
-            Bot.GetBotClientAsync().Wait();
+            BotHook.GetBotClientAsync().Wait();
         }
     }
 }

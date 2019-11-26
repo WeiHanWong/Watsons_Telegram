@@ -12,3 +12,17 @@ C:\Users\Weihan\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\n
 C:\Users\Weihan\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.RazorTargetAssemblyInfo.cache
 C:\Users\Weihan\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.dll
 C:\Users\Weihan\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.pdb
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\bin\Release\netcoreapp2.1\Watsons_Telegram.deps.json
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\bin\Release\netcoreapp2.1\Watsons_Telegram.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\bin\Release\netcoreapp2.1\Watsons_Telegram.runtimeconfig.dev.json
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\bin\Release\netcoreapp2.1\Watsons_Telegram.dll
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\bin\Release\netcoreapp2.1\Watsons_Telegram.pdb
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.RazorAssemblyInfo.cache
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.RazorAssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.RazorTargetAssemblyInfo.cache
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.dll
+C:\Users\Admin\Documents\GitHub\Watsons_Telegram\Watsons_Telegram\obj\Release\netcoreapp2.1\Watsons_Telegram.pdb

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
+using Watsons_Telegram.Models;
 
 namespace Watsons_Telegram.Controllers
 {
@@ -17,7 +18,6 @@ namespace Watsons_Telegram.Controllers
 
         public IActionResult Create([FromBody] string value)
         {
-            string customMessage = "";
             dynamic broadcastBody = JsonConvert.DeserializeObject<dynamic>(value);
             try
             {
@@ -25,19 +25,16 @@ namespace Watsons_Telegram.Controllers
 
                 var m = broadcastBody.message.Value;
 
-                string apiKey = "1003051671:AAHsWnY16v1DTMl7jDPg1q80MvtBR5xA4k4";
-
                 foreach (var chatid in ids)
                 {
-                    Task<HttpResponseMessage> task = client.PostAsync("https://api.telegram.org/bot" + apiKey + "/sendMessage?chat_id=" + chatid + "&text=" + m, null);
+                    Task<HttpResponseMessage> task = client.PostAsync("https://api.telegram.org/bot" + Bot.Key + "/sendMessage?chat_id=" + chatid + "&text=" + m, null);
                 }
                 
                 return Ok();
             }
             catch (Exception)
             {
-                customMessage = "Unable to send";
-                object httpFailRequestResultMessage = new { message = customMessage };
+                object httpFailRequestResultMessage = new { message = "Unable to send" };
                 return BadRequest(httpFailRequestResultMessage);
             }
         }

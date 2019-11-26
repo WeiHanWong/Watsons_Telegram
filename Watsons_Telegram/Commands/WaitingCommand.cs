@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace Watsons_Telegram.Models.Commands
+namespace Watsons_Telegram.Commands
 {
-    public class StartCommand : Command
+    public class WaitingCommand : Command
     {
-        public override string Name => @"/start";
+        public override string Name => @"/waitingtime";
 
         public override bool Contains(Message message)
         {
@@ -22,11 +22,7 @@ namespace Watsons_Telegram.Models.Commands
         public override async Task Execute(Message message, TelegramBotClient botClient)
         {
             var chatId = message.Chat.Id;
-            await botClient.SendTextMessageAsync(chatId, 
-                @"Usage: 
-/slotavailability - get slot availability
-/waitingtime - get average waiting time
-/operatinghours - get operating hours", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
+            await botClient.SendTextMessageAsync(chatId, "10 mins", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
         }
     }
 }

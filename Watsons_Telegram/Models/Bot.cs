@@ -2,38 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Telegram.Bot;
-using Watsons_Telegram.Models.Commands;
 
 namespace Watsons_Telegram.Models
 {
     public class Bot
     {
-        private static TelegramBotClient botClient;
-        private static List<Command> commandsList;
-
-        public static IReadOnlyList<Command> Commands => commandsList.AsReadOnly();
-
-        public static async Task<TelegramBotClient> GetBotClientAsync()
-        {
-            if (botClient != null)
-            {
-                return botClient;
-            }
-
-            commandsList = new List<Command>();
-            commandsList.Add(new StartCommand());
-            commandsList.Add(new AvailabilityCommand());
-            commandsList.Add(new WaitingCommand());
-            commandsList.Add(new OperatingCommand());
-            commandsList.Add(new ChatIdCommand());
-            commandsList.Add(new OtherCommand());
-            //TODO: Add more commands
-
-            botClient = new TelegramBotClient(AppSettings.Key);
-            string hook = string.Format(AppSettings.Url, "api/message/update");
-            await botClient.SetWebhookAsync(hook);
-            return botClient;
-        }
+        public static string Url { get; set; } = "https://watsonstelegram.azurewebsites.net:443/{0}";
+        public static string Name { get; set; } = "watsons_bot";
+        public static string Key { get; set; } = "1003051671:AAHsWnY16v1DTMl7jDPg1q80MvtBR5xA4k4";
     }
 }
