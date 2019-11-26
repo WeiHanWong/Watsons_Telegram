@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Watsons_Telegram.Models;
+using Watson_WebService;
 
 namespace Watsons_Telegram.Controllers
 {
@@ -14,18 +15,31 @@ namespace Watsons_Telegram.Controllers
     [ApiController]
     public class BroadcastController : ControllerBase
     {
+
+        public ApplicationDbContext Database { get; }
+
+        public BroadcastController(ApplicationDbContext database)
+        {
+            Database = database;
+        }
+
         private static readonly HttpClient client = new HttpClient();
 
+        [HttpPost]
         public IActionResult Create([FromBody] string value)
         {
             dynamic broadcastBody = JsonConvert.DeserializeObject<dynamic>(value);
             try
             {
-                string[] ids = new string[] { "473354391", "460865971" };
+                var chatQuery = Database.TelegramUsers
+                    .Select(x => x.ChatId)
+                    .ToArray();
+
+                //string[] ids = new string[] { "473354391", "460865971" };
 
                 var m = broadcastBody.message.Value;
 
-                foreach (var chatid in ids)
+                foreach (var chatid in chatQuery)
                 {
                     Task<HttpResponseMessage> task = client.PostAsync("https://api.telegram.org/bot" + Bot.Key + "/sendMessage?chat_id=" + chatid + "&text=" + m, null);
                 }

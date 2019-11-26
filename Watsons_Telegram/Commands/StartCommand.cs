@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using Watson_WebService;
+using Watsons_Telegram.Models;
 
 namespace Watsons_Telegram.Commands
 {
@@ -22,6 +24,23 @@ namespace Watsons_Telegram.Commands
         public override async Task Execute(Message message, TelegramBotClient botClient)
         {
             var chatId = message.Chat.Id;
+
+            ApplicationDbContext Database = new ApplicationDbContext();
+
+            TelegramUser newUser = new TelegramUser();
+
+            var slotQueryResultCount = Database.TelegramUsers
+            .Where(x => x.ChatId == chatId.ToString())
+            .Count();
+
+            if(slotQueryResultCount < 1)
+            {
+                newUser.ChatId = chatId.ToString();
+
+                Database.TelegramUsers.Add(newUser);
+                Database.SaveChanges();
+            }
+
             await botClient.SendTextMessageAsync(chatId, 
                 @"Usage: 
 /slotavailability - get slot availability
