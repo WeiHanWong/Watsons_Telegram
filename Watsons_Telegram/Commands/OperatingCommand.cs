@@ -17,7 +17,7 @@ namespace Watsons_Telegram.Commands
             if (message.Type != Telegram.Bot.Types.Enums.MessageType.Text)
                 return false;
 
-            return message.Text.Contains(this.Name);
+            return message.Text.Contains(this.Name) || message.Text.Contains("Operating Hours");
         }
 
         public override async Task Execute(Message message, TelegramBotClient botClient)
@@ -26,8 +26,8 @@ namespace Watsons_Telegram.Commands
 
             ReplyKeyboardMarkup ReplyKeyboard = new[]
                     {
-                        new[] { "/slotavailability", "/waitingtime" },
-                        new[] { "/operatinghours"},
+                        new[] { "Slot Availabity", "Waiting Time" },
+                        new[] { "Operating Hours"},
                     };
 
             await botClient.SendTextMessageAsync(chatId, "8:00am to 11:45pm", parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: ReplyKeyboard);

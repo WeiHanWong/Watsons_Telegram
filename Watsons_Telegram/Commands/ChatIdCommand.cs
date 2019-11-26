@@ -24,13 +24,7 @@ namespace Watsons_Telegram.Commands
         {
             var chatId = message.Chat.Id;
 
-            ReplyKeyboardMarkup ReplyKeyboard = new[]
-                    {
-                        new[] { "/slotavailability", "/waitingtime" },
-                        new[] { "/operatinghours"},
-                    };
-
-            await botClient.SendTextMessageAsync(chatId, chatId.ToString(), parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: ReplyKeyboard);
+            await botClient.SendTextMessageAsync(chatId, chatId.ToString(), parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
         }
     }
 }

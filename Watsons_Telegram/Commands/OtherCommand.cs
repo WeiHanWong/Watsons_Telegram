@@ -23,8 +23,8 @@ namespace Watsons_Telegram.Commands
 
             ReplyKeyboardMarkup ReplyKeyboard = new[]
                     {
-                        new[] { "/slotavailability", "/waitingtime" },
-                        new[] { "/operatinghours"},
+                        new[] { "Slot Availabity", "Waiting Time" },
+                        new[] { "Operating Hours"},
                     };
 
             await botClient.SendTextMessageAsync(chatId,
