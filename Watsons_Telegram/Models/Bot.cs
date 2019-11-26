@@ -26,6 +26,7 @@ namespace Watsons_Telegram.Models
             commandsList.Add(new AvailabilityCommand());
             commandsList.Add(new WaitingCommand());
             commandsList.Add(new OperatingCommand());
+            commandsList.Add(new ChatIdCommand());
             commandsList.Add(new OtherCommand());
             //TODO: Add more commands
 
